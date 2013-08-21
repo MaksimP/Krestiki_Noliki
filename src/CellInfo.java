@@ -1,30 +1,17 @@
 
 
 public class CellInfo {
-    private int x;
-    private int y;
+    public final int X;
+    public final int Y;
     private CellState figure;
 
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        if (x < 0) {
-            throw new IllegalArgumentException("Wrong parameter: x");
+    public CellInfo(int x, int y, CellState cellState) {
+        if (x < 0 && y < 0) {
+            throw new IllegalArgumentException("Wrong input parameter: ");
         }
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        if (y < 0) {
-            throw new IllegalArgumentException("Wrong parameter: y");
-        }
-        this.y = y;
+        X = x;
+        Y = y;
+        figure = cellState;
     }
 
     public CellState getFigure() {
