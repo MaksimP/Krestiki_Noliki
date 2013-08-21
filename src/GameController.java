@@ -1,3 +1,5 @@
+import Player.Player;
+
 public class GameController
 {
     private GameType gameType;
@@ -18,6 +20,14 @@ public class GameController
     public GameType getGameType()
     {
         return gameType;
+    }
+
+    /*
+       @param instance of class implemented Interface Player
+     */
+    private void startGame(Player playerone,Player playertwo)
+    {
+
     }
 
 }

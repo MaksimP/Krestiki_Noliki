@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418f8390-31cd-444f-b09b-7e57a76e4697" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player/AIPlayer.java" afterPath="$PROJECT_DIR$/src/Player/AIPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FieldController.java" afterPath="$PROJECT_DIR$/src/FieldController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameController.java" afterPath="$PROJECT_DIR$/src/GameController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameType.java" afterPath="$PROJECT_DIR$/src/GameType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player/LivePlayer.java" afterPath="$PROJECT_DIR$/src/Player/LivePlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player/Player.java" afterPath="$PROJECT_DIR$/src/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player/RemotePlayer.java" afterPath="$PROJECT_DIR$/src/Player/RemotePlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Krestiki_noliki.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,8 +13,9 @@
     <file path="/LivePlayer.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377100879764" ignored="false" />
     <file path="/RemotePlayer.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377100955728" ignored="false" />
     <file path="/AIPlayer.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377100963141" ignored="false" />
-    <file path="/GameType.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377104714554" ignored="false" />
-    <file path="/GameController.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377105719314" ignored="false" />
+    <file path="/GameType.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377105926230" ignored="false" />
+    <file path="/GameController.java" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377106248468" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="418f8390-31cd-444f-b09b-7e57a76e4697" time="1377106272289" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,55 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Settings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AIPlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Player/AIPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="49" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FieldController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FieldController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CellState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetworkHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NetworkHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="26" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+            <state line="4" column="18" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,34 +88,7 @@
       <file leaf-file-name="GameController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemotePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Player/RemotePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CellInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+            <state line="30" column="5" selection-start="491" selection-end="491" vertical-scroll-proportion="0.7512521">
               <folding />
             </state>
           </provider>
@@ -189,10 +113,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/Player/Player.java" />
-        <option value="$PROJECT_DIR$/src/GameType.java" />
         <option value="$PROJECT_DIR$/src/Player/LivePlayer.java" />
         <option value="$PROJECT_DIR$/src/Player/AIPlayer.java" />
         <option value="$PROJECT_DIR$/src/Player/RemotePlayer.java" />
+        <option value="$PROJECT_DIR$/src/FieldController.java" />
+        <option value="$PROJECT_DIR$/src/GameType.java" />
         <option value="$PROJECT_DIR$/src/GameController.java" />
       </list>
     </option>
@@ -259,6 +184,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Krestiki_noliki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Krestiki_Noliki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -535,7 +478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NetworkHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+        <state line="7" column="26" selection-start="179" selection-end="179" vertical-scroll-proportion="0.17529215">
           <folding />
         </state>
       </provider>
@@ -547,30 +490,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FieldController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+        <state line="7" column="18" selection-start="171" selection-end="171" vertical-scroll-proportion="0.17529215">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CellState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+        <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.17529215">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CellInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+        <state line="7" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.17529215">
           <folding />
         </state>
       </provider>
@@ -589,23 +525,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FieldController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player/RemotePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="183" selection-end="183" vertical-scroll-proportion="0.22537562">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
+        <state line="4" column="18" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="30" column="5" selection-start="491" selection-end="491" vertical-scroll-proportion="0.7512521">
           <folding />
         </state>
       </provider>

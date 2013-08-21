@@ -1,4 +1,4 @@
 public enum GameType
 {
-    EASY,NORMAL,HARD;
+    SINGLE,HOTSEAT,MULTIPLAYER;
 }
