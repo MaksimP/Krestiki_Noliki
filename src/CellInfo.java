@@ -1,9 +1,21 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Nikita
- * Date: 21.08.13
- * Time: 18:55
- * To change this template use File | Settings | File Templates.
- */
+
+
 public class CellInfo {
+    public final int X;
+    public final int Y;
+    private CellState figure;
+
+    public CellInfo(int x, int y, CellState cellState) {
+        X = x;
+        Y = y;
+        figure = cellState;
+    }
+
+    public CellState getFigure() {
+        return figure;
+    }
+
+    public void setFigure(CellState figure) {
+        this.figure = figure;
+    }
 }
