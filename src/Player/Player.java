@@ -9,5 +9,5 @@ package Player;
  */
 public interface Player {
 
-   void doMove (int x; int y);
+   void doMove (int x, int y);
 }

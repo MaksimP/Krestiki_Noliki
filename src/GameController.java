@@ -1,9 +1,23 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Nikita
- * Date: 21.08.13
- * Time: 18:58
- * To change this template use File | Settings | File Templates.
- */
-public class GameController {
+public class GameController
+{
+    private GameType gameType;
+
+    /*
+      @param instance of GameType
+     */
+    public void setGameType(GameType gameType)
+    {
+        this.gameType = gameType;
+
+    }
+
+
+     /*
+     @return GameType
+      */
+    public GameType getGameType()
+    {
+        return gameType;
+    }
+
 }
