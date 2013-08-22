@@ -31,4 +31,7 @@ public class Field {
             return true;
         return false;
     }
+    public CellState[][] getField() {
+        return field;
+    }
 }
