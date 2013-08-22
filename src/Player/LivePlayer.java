@@ -8,4 +8,10 @@ package Player;
  * To change this template use File | Settings | File Templates.
  */
 public class LivePlayer implements Player {
+
+
+    @Override
+    public void doMove(int x, int y) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
