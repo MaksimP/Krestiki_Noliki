@@ -13,21 +13,21 @@ public class Field {
         } else {
             availableCells--;
         }
-        field[cell.X][cell.X] = cell.getFigure();
+        field[cell.Y][cell.X] = cell.getFigure();
     }
     public CellInfo getCell(CellInfo cell) {
         return new CellInfo(cell.X, cell.Y, field[cell.X][cell.Y]);
     }
     public void clear() {
         availableCells = 0;
-        for(int x = 0; x < SIZE; x++) {
-            for(int y = 0; y < SIZE; y++) {
+        for(int y = 0; y < SIZE; y++) {
+            for(int x = 0; x < SIZE; x++) {
                 setCell(new CellInfo(x,y,CellState.EMPTY));
             }
         }
     }
     public boolean isAvailible(CellInfo cell) {
-        if(field[cell.X][cell.Y] == CellState.EMPTY)
+        if(field[cell.Y][cell.X] == CellState.EMPTY)
             return true;
         return false;
     }
