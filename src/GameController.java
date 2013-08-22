@@ -29,5 +29,9 @@ public class GameController
     {
 
     }
+    
+    public void gamePrepare(GameType type) {
+        
+    }
 
 }
