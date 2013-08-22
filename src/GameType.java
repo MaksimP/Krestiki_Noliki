@@ -1,4 +1,3 @@
-public enum GameType
-{
-    SINGLE,HOTSEAT,MULTIPLAYER;
+public enum GameType {
+    SINGLE, HOTSEAT, MULTIPLAYER;
 }
