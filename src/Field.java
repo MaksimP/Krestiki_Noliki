@@ -1,4 +1,5 @@
 public class Field {
+    private static final int DEFAULT_FIELD_SIZE = 3;
     public final int SIZE;
     private CellState[][] field;
     private int availableCells = 0;
@@ -6,6 +7,9 @@ public class Field {
         SIZE = fieldSize;
         field = new CellState[SIZE][SIZE];
         clear();
+    }
+    public Field() {
+        this(DEFAULT_FIELD_SIZE);
     }
     public void setCell(CellInfo cell) {
         if(cell.getFigure() == CellState.EMPTY) {
