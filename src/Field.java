@@ -8,15 +8,15 @@ public class Field {
         clear();
     }
     public void setCell(CellInfo cell) {
-        if(cell.figure == CellState.EMPTY) {
+        if(cell.getFigure() == CellState.EMPTY) {
             availableCells++;
         } else {
             availableCells--;
         }
-        field[cell.x][cell.y] = cell.figure;
+        field[cell.X][cell.X] = cell.getFigure();
     }
     public CellInfo getCell(CellInfo cell) {
-        return new CellInfo(cell.x, cell.y, field[cell.x][cell.y]);
+        return new CellInfo(cell.X, cell.Y, field[cell.X][cell.Y]);
     }
     public void clear() {
         availableCells = 0;
@@ -27,7 +27,7 @@ public class Field {
         }
     }
     public boolean isAvailible(CellInfo cell) {
-        if(field[cell.x][cell.y] == CellState.EMPTY)
+        if(field[cell.X][cell.Y] == CellState.EMPTY)
             return true;
         return false;
     }
