@@ -1,5 +1,5 @@
 
 
 public enum CellState {
-    X, Y, EMPTY
+    X, O, EMPTY
 }
