@@ -1,13 +1,19 @@
-package Player;
+package com.Player;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Nikita
- * Date: 21.08.13
- * Time: 18:59
- * To change this template use File | Settings | File Templates.
- */
-public interface Player {
+abstract public class Player {
 
-   void doMove (int x, int y);
+    public static final int MAX_SIZE_FIELD = 4;
+
+    public static final int ZERO = 0;
+
+    public abstract void doMove (int x, int y);
+
+    protected boolean checkValue(int x, int y) {
+        if ((x > ZERO && y > ZERO) && (x < MAX_SIZE_FIELD && y < MAX_SIZE_FIELD)) {
+            return true;
+        }
+        return false;
+    }
+
 }
+
