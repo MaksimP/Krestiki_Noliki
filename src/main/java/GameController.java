@@ -1,4 +1,6 @@
-import Player.Player;
+package main.java;
+
+import main.java.Player.Player;
 
 public class GameController
 {

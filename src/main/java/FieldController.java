@@ -1,3 +1,5 @@
+package main.java;
+
 public class FieldController {
 
     private final static int NEED_CHARACTERS_TO_WIN = 3;

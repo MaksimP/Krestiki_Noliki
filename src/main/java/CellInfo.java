@@ -1,4 +1,4 @@
-
+package main.java;
 
 public class CellInfo {
     public final int X;

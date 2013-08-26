@@ -1,4 +1,4 @@
-package com;
+package main.java;
 
 public class Settings {
 
