@@ -41,7 +41,7 @@ public class Field {
         }
     }
 
-    public boolean isAvailible(CellInfo cell) {
+    public boolean isAvailable(CellInfo cell) {
         return field[cell.Y][cell.X] == CellState.EMPTY;
     }
 

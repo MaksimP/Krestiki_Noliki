@@ -35,7 +35,7 @@ public abstract class Player {
 
     private void doMove(int x, int y) {
         cellInfo = new CellInfo(x, y, cellState);
-        if (checkValue(x, y) && this.field.isAvailible(cellInfo)) {
+        if (checkValue(x, y) && this.field.isAvailable(cellInfo)) {
             field.setCell(cellInfo);
         }
     }
