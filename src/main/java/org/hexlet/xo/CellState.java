@@ -1,4 +1,4 @@
-package main.java;
+package org.hexlet.xo;
 
 public enum CellState {
     X, O, EMPTY

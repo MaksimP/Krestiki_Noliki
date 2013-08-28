@@ -1,4 +1,4 @@
-package main.java;
+package org.hexlet.xo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,14 +12,14 @@ public class NetworkHelper {
     private static final int PORT = 131313;
     private ServerSocket server;
     private Socket waitingClientConnect;
-    BufferedReader inputServer;
-    BufferedReader inputServerUser;
-    PrintWriter    outputServer;
+    private BufferedReader inputServer;
+    private BufferedReader inputServerUser;
+    private PrintWriter    outputServer;
 
     private Socket client;
-    BufferedReader inputClient;
+    private BufferedReader inputClient;
     PrintWriter    outputClient;
-    BufferedReader inputUser;
+    private BufferedReader inputUser;
 
     public void createServerNetworkPlayer() throws IOException {
         try {

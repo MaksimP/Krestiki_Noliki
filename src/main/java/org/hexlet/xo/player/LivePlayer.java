@@ -1,6 +1,8 @@
-package main.java.Player;
+package org.hexlet.xo.player;
 
-import main.java.*;
+import org.hexlet.xo.CellState;
+
+import static org.hexlet.xo.Constants.DEFAULT_PLAYER;
 
 public class LivePlayer extends Player {
 
@@ -9,7 +11,7 @@ public class LivePlayer extends Player {
     }
 
     public LivePlayer(CellState figure) {
-        this("default", figure);
+        this(DEFAULT_PLAYER, figure);
     }
 
 }

@@ -1,4 +1,4 @@
-package main.java;
+package org.hexlet.xo;
 
 public class Settings {
 

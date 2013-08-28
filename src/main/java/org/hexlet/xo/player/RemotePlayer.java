@@ -1,11 +1,13 @@
-package main.java.Player;
+package org.hexlet.xo.player;
 
-import main.java.CellState;
+import org.hexlet.xo.CellState;
+
+import static org.hexlet.xo.Constants.DEFAULT_PLAYER;
 
 public class RemotePlayer extends Player {
 
     public RemotePlayer(CellState figure) {
-        super("default", figure);
+        super(DEFAULT_PLAYER, figure);
     }
 
     private int getID() {

@@ -1,6 +1,9 @@
-package main.java.Player;
+package org.hexlet.xo.player;
 
-import main.java.*;
+import org.hexlet.xo.CellInfo;
+import org.hexlet.xo.CellState;
+import org.hexlet.xo.Field;
+import org.hexlet.xo.Settings;
 
 public abstract class Player {
 
@@ -25,10 +28,9 @@ public abstract class Player {
     }
 
     protected boolean checkValue(int x, int y) {
-        if ((x > ZERO && y > ZERO) && (x < MAX_SIZE_FIELD && y < MAX_SIZE_FIELD)) {
-            return true;
-        }
-        return false;
+        boolean moreThanZero = x > ZERO && y > ZERO;
+        boolean lessThenMaxSize = x < MAX_SIZE_FIELD && y < MAX_SIZE_FIELD;
+        return moreThanZero && lessThenMaxSize;
     }
 
     private void doMove(int x, int y) {

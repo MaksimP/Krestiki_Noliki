@@ -4,9 +4,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>HEXLET101ARCH</groupId>
-    <artifactId>Krestiki_noliki_architect</artifactId>
+    <groupId>org.hexlet</groupId>
+    <artifactId>Krestiki-Noliki</artifactId>
     <version>0.0.1</version>
+    <packaging>pom</packaging>
 
-    
+    <name>Krestiki Noliki Project</name>
+    <url>https://github.com/nikkrichko/Krestiki_Noliki</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.6</jdk.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
