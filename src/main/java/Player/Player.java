@@ -2,7 +2,7 @@ package main.java.Player;
 
 import main.java.*;
 
-public abstract class Player {
+public abstract class Player implements IPlayer{
 
     public static final int MAX_SIZE_FIELD = 4;
 
@@ -31,7 +31,8 @@ public abstract class Player {
         return false;
     }
 
-    private void doMove(int x, int y) {
+    @Override
+    public void doMove(int x, int y) {
         cellInfo = new CellInfo(x, y, cellState);
         if (checkValue(x, y) && this.field.isAvailible(cellInfo)) {
             field.setCell(cellInfo);
