@@ -1,7 +1,12 @@
 package org.hexlet.xo.player;
 
+import org.hexlet.xo.CellInfo;
+import org.hexlet.xo.CellState;
+
 public interface Player {
 
-    void doMove (int x, int y);
+    void onMove (int x, int y);
+    CellInfo getMove();
+    CellState getFigure();
 
 }
