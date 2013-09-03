@@ -24,7 +24,7 @@ public class GameController {
     /*
        @param instance of class implemented Interface Player
      */
-    private void startGame(Player playerone, Player playertwo) {
+    private void startGame(Player playerone, Player playertwo, GameStateListener stateListener) {
 
     }
 
