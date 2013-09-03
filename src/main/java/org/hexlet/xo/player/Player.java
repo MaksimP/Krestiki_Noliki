@@ -5,7 +5,7 @@ import org.hexlet.xo.CellState;
 import org.hexlet.xo.Field;
 import org.hexlet.xo.Settings;
 
-public abstract class Player {
+public abstract class Player implements IPlayer{
 
     public static final int MAX_SIZE_FIELD = 4;
 
@@ -33,7 +33,8 @@ public abstract class Player {
         return moreThanZero && lessThenMaxSize;
     }
 
-    private void doMove(int x, int y) {
+    @Override
+    public void doMove(int x, int y) {
         cellInfo = new CellInfo(x, y, cellState);
         if (checkValue(x, y) && this.field.isAvailable(cellInfo)) {
             field.setCell(cellInfo);
