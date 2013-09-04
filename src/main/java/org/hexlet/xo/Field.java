@@ -4,7 +4,6 @@ public class Field {
     private static final int DEFAULT_FIELD_SIZE = 3;
     public final int SIZE;
     private CellState[][] field;
-    private int availableCells = 0;
 
     public Field(int fieldSize) {
         SIZE = fieldSize;
@@ -16,12 +15,13 @@ public class Field {
         this(DEFAULT_FIELD_SIZE);
     }
 
-    private void calculateAvailableCells() {
+    public int getEmptyCellsCount() {
+        int availableCells = 0;
         for (int i = 0; i < SIZE; i++)
             for (int j = 0; j < SIZE; j++)
                 if (field[i][j] == CellState.EMPTY)
                     availableCells++;
-
+        return availableCells;
     }
 
     public void setCell(CellInfo cell) {
@@ -33,16 +33,11 @@ public class Field {
     }
 
     public void clear() {
-        availableCells = 0;
         for (int y = 0; y < SIZE; y++) {
             for (int x = 0; x < SIZE; x++) {
                 setCell(new CellInfo(x, y, CellState.EMPTY));
             }
         }
-    }
-
-    public boolean isAvailable(CellInfo cell) {
-        return field[cell.Y][cell.X] == CellState.EMPTY;
     }
 
     public CellState[][] getField() {
@@ -58,10 +53,4 @@ public class Field {
         return fieldCopy;
     }
 
-    public void setField(CellState[][] newField) {
-        //new array must have match sizes with existing
-        if (newField.length != SIZE || newField[0].length != SIZE)
-            throw new ArrayIndexOutOfBoundsException();
-        field = newField;
-    }
 }
