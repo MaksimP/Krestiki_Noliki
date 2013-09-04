@@ -3,6 +3,7 @@ package org.hexlet.xo;
 public class FieldController {
 
     private final static int NEED_CHARACTERS_TO_WIN = 3;
+    private Field field;
 
     // TODO: Refactor
     public boolean checkWin(Field gameField, int x, int y) {
@@ -76,6 +77,18 @@ public class FieldController {
         }
 
         return false;
+    }
+
+    public void createField(int size) {
+        if (field != null && field.SIZE == size) {
+            field.clear();
+        } else {
+            field = new Field(size);
+        }
+    }
+
+    public boolean isAvailable(int x, int y) {
+        return field.getCell(new CellInfo(x,y,null)).getFigure() == CellState.EMPTY;
     }
 
 }
