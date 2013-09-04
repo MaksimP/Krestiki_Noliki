@@ -46,7 +46,16 @@ public class Field {
     }
 
     public CellState[][] getField() {
-        return field;
+        /*if we returning original field
+        anyone can write in field array directly
+         */
+        CellState [][] fieldCopy = new CellState[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                fieldCopy[i][j] = field[i][j];
+            }
+        }
+        return fieldCopy;
     }
 
     public void setField(CellState[][] newField) {
