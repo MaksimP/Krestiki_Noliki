@@ -1,5 +1,7 @@
 package org.hexlet.xo;
 
+import org.hexlet.xo.exception.CellNotAvailableException;
+
 public class FieldController {
 
     private final static int NEED_CHARACTERS_TO_WIN = 3;
@@ -89,6 +91,12 @@ public class FieldController {
 
     public boolean isAvailable(int x, int y) {
         return field.getCell(x,y).getFigure() == CellState.EMPTY;
+    }
+
+    public void setCell(CellInfo cell) throws CellNotAvailableException {
+        if (!isAvailable(cell.X, cell.Y))
+            throw new CellNotAvailableException("Cell "+cell.X+":"+cell.Y+" already in use");
+        field.setCell(cell);
     }
 
 }
