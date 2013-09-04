@@ -28,8 +28,8 @@ public class Field {
         field[cell.Y][cell.X] = cell.getFigure();
     }
 
-    public CellInfo getCell(CellInfo cell) {
-        return new CellInfo(cell.X, cell.Y, field[cell.X][cell.Y]);
+    public CellInfo getCell(int x, int y) {
+        return new CellInfo(x, y, field[x][y]);
     }
 
     public void clear() {
