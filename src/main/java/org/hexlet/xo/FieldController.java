@@ -88,7 +88,7 @@ public class FieldController {
     }
 
     public boolean isAvailable(int x, int y) {
-        return field.getCell(new CellInfo(x,y,null)).getFigure() == CellState.EMPTY;
+        return field.getCell(x,y).getFigure() == CellState.EMPTY;
     }
 
 }
