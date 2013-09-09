@@ -1,5 +1,7 @@
 package org.hexlet.xo;
 
+import org.hexlet.xo.exception.InvalidCellCoordinatesException;
+
 public class Field {
     private static final int DEFAULT_FIELD_SIZE = 3;
     public final int SIZE;
@@ -25,17 +27,21 @@ public class Field {
     }
 
     public void setCell(CellInfo cell) {
-        field[cell.Y][cell.X] = cell.getFigure();
+        field[cell.Y][cell.X] = cell.figure;
     }
 
-    public CellInfo getCell(int x, int y) {
+    public CellInfo getCell(int x, int y) throws InvalidCellCoordinatesException {
         return new CellInfo(x, y, field[x][y]);
     }
 
     public void clear() {
         for (int y = 0; y < SIZE; y++) {
             for (int x = 0; x < SIZE; x++) {
-                setCell(new CellInfo(x, y, CellState.EMPTY));
+                try {
+                    setCell(new CellInfo(x, y, CellState.EMPTY));
+                } catch (InvalidCellCoordinatesException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
