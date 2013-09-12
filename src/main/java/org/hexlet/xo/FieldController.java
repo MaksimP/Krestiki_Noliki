@@ -8,10 +8,10 @@ public class FieldController {
     private final static int NEED_CHARACTERS_TO_WIN = 3;
     private Field field;
 
-    public boolean checkWin(int x, int y) {
+    public boolean checkWin(CellState figure) {
 
         CellState field[][] = this.field.getField();
-        CellState cell = field[x][y];
+        CellState cell = figure;
 
         int horizontalSequenceLength = 0;
         int verticalSequenceLength = 0;
