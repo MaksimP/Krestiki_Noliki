@@ -15,4 +15,8 @@ public class CellInfo {
         Y = y;
         figure = cellState;
     }
+
+    public CellState getFigure() {
+        return figure;
+    }
 }
