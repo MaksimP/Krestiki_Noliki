@@ -8,9 +8,9 @@ public class FieldController {
     private final static int NEED_CHARACTERS_TO_WIN = 3;
     private Field field;
 
-    public boolean checkWin(Field gameField, int x, int y) {
+    public boolean checkWin(int x, int y) {
 
-        CellState field[][] = gameField.getField();
+        CellState field[][] = this.field.getField();
         CellState cell = field[x][y];
 
         int horizontalSequenceLength = 0;
@@ -20,8 +20,8 @@ public class FieldController {
             return false;
 
         // Horizontal check & Vertical check
-        for (int i = 0; i < gameField.SIZE; i++) {
-            for (int j = 0; j < gameField.SIZE; j++) {
+        for (int i = 0; i < this.field.SIZE; i++) {
+            for (int j = 0; j < this.field.SIZE; j++) {
                  if (field[i][j] == cell) {
                      horizontalSequenceLength++;
                  }
@@ -45,7 +45,7 @@ public class FieldController {
         int diagonalSequenceLength2 = 0;
 
         // Diagonal check
-        for (int i = 0, j = 2; i < gameField.SIZE; i++, j--) {
+        for (int i = 0, j = 2; i < this.field.SIZE; i++, j--) {
             if (field[i][i] == cell) {
                 diagonalSequenceLength1++;
             }
