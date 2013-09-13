@@ -6,6 +6,8 @@ import org.hexlet.xo.player.Player;
 
 public class GameController {
 
+    private static final int DEFAILT_FIELD_SIZE = 3;
+
     private Player playerOne;
 
     private Player playerTwo;
@@ -13,6 +15,7 @@ public class GameController {
     private Player currentPlayer;
 
     private FieldController fieldController;
+    private GameStateListener listener;
 
     private GameController() {
         fieldController = new FieldController();
@@ -57,15 +60,17 @@ public class GameController {
     }*/
 
     public void startGame(Player playerOne, Player playerTwo, GameStateListener listener) {
-        if (figureChecking(playerOne, playerTwo)) {
-            this.gameController = new GameController(playerOne, playerTwo);
-        }
+        startGame(playerOne,playerTwo,DEFAILT_FIELD_SIZE,listener);
+
     }
 
     public void startGame(Player playerOne, Player playerTwo, int size, GameStateListener listener) {
-        if (figureChecking(playerOne, playerTwo)) {
-            this.gameController = new GameController(playerOne, playerTwo, size);
-        }
+        if (!figureChecking(playerOne, playerTwo)) {}//stub
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
+        this.listener = listener;
+        switchPlayers();
+        fieldController.createField(size);
     }
 
     private void switchPlayers() {
