@@ -79,5 +79,8 @@ public class FieldController {
             throw new CellNotAvailableException("Cell "+cell.X+":"+cell.Y+" already in use");
         field.setCell(cell);
     }
+    public int getFieldSize() {
+        return field.SIZE;
+    }
 
 }
