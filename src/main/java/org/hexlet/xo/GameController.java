@@ -5,8 +5,6 @@ import org.hexlet.xo.player.Player;
 
 public class GameController {
 
-    private static final int DEFAULT_FIELD_SIZE = 3;
-
     private Player playerOne;
 
     private Player playerTwo;
