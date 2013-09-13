@@ -26,10 +26,8 @@ public class GameController {
     }
 
     private boolean figureChecking(Player playerOne, Player playerTwo) {
-        CellState figureEmpty = CellState.EMPTY;
-        CellState playerOneFigure = playerOne.getFigure();
-        CellState playerTwoFigure = playerTwo.getFigure();
-        if ((playerOneFigure != playerTwoFigure) && (playerOneFigure != figureEmpty && playerTwoFigure != figureEmpty)) {
+        if (playerOne.getFigure() == playerTwo.getFigure() || playerOne.getFigure() == CellState.EMPTY
+                || playerTwo.getFigure() == CellState.EMPTY) {
             return true;
         }
         return false;
@@ -45,7 +43,7 @@ public class GameController {
 
     public Player currentPlayer() {
 
-        return this.currentPlayer;
+        return currentPlayer;
     }
 
     public void nextTurn(CellInfo cellInfo) throws InvalidCellCoordinatesException, CellNotAvailableException {
