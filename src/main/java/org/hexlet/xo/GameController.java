@@ -17,10 +17,6 @@ public class GameController {
         fieldController = new FieldController();
     }
 
-    private GameController(Player playerOne, Player playerTwo) {
-        this(playerOne, playerTwo, DEFAULT_FIELD_SIZE);
-    }
-
     private boolean isAvailable(CellInfo cellInfo) throws InvalidCellCoordinatesException {
         return fieldController.isAvailable(cellInfo);
     }
