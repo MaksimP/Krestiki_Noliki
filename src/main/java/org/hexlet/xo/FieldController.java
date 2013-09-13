@@ -70,12 +70,12 @@ public class FieldController {
         }
     }
 
-    public boolean isAvailable(int x, int y) throws InvalidCellCoordinatesException {
-        return field.getCell(x,y).getFigure() == CellState.EMPTY;
+    public boolean isAvailable(CellInfo cell) throws InvalidCellCoordinatesException {
+        return field.getCell(cell.X,cell.Y).getFigure() == CellState.EMPTY;
     }
 
     public void setCell(CellInfo cell) throws CellNotAvailableException, InvalidCellCoordinatesException {
-        if (!isAvailable(cell.X, cell.Y))
+        if (!isAvailable(cell))
             throw new CellNotAvailableException("Cell "+cell.X+":"+cell.Y+" already in use");
         field.setCell(cell);
     }
