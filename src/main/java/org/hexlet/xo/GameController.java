@@ -49,8 +49,11 @@ public class GameController {
     public void nextTurn(CellInfo cellInfo) throws InvalidCellCoordinatesException, CellNotAvailableException {
         isAvailable(cellInfo);
         fieldController.setCell(cellInfo);
-        fieldController.checkWin(cellInfo.getFigure());
-        currentPlayer();
+        if(fieldController.checkWin(cellInfo.getFigure()))
+            listener.onWin(currentPlayer);
+        else if(fieldController.getEmptyCellsCount() == 0)
+            listener.onDraw();
+        switchPlayers();
     }
 
    /* public void abortGame() {
