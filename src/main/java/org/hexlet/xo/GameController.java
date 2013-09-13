@@ -1,12 +1,11 @@
 package org.hexlet.xo;
 
+import org.hexlet.xo.exception.InvalidCellCoordinatesException;
 import org.hexlet.xo.player.Player;
 
 public class GameController {
 
     private static final int DEFAULT_FIELD_SIZE = 3;
-
-    private Field field;
 
     private Player playerOne;
 
@@ -18,10 +17,7 @@ public class GameController {
 
     private GameController gameController;
 
-    private GameController(Player playerOne, Player playerTwo, int size) {
-        this.field = new Field(size);
-        this.playerOne = playerOne;
-        this.playerTwo = playerTwo;
+    private GameController() {
         fieldController = new FieldController();
     }
 
@@ -29,8 +25,8 @@ public class GameController {
         this(playerOne, playerTwo, DEFAULT_FIELD_SIZE);
     }
 
-    private boolean isAvailable(CellInfo cellInfo) {
-        field.isAvailable(cellInfo);
+    private boolean isAvailable(CellInfo cellInfo) throws InvalidCellCoordinatesException {
+        return fieldController.isAvailable(cellInfo);
     }
 
     private boolean figureChecking(Player playerOne, Player playerTwo) {
@@ -60,7 +56,7 @@ public class GameController {
         return this.currentPlayer;
     }
 
-    public void nextTurn(CellInfo cellInfo) {
+    public void nextTurn(CellInfo cellInfo) throws InvalidCellCoordinatesException {
         isAvailable(cellInfo);
         field.setCell(cellInfo);
         fieldController.checkWin(cellInfo.getFigure());
