@@ -1,5 +1,6 @@
 package org.hexlet.xo;
 
+import org.hexlet.xo.exception.CellNotAvailableException;
 import org.hexlet.xo.exception.InvalidCellCoordinatesException;
 import org.hexlet.xo.player.Player;
 
@@ -32,32 +33,28 @@ public class GameController {
     }
 
     public int getSize() {
-        return field.SIZE;
+        return fieldController.getFieldSize();
     }
 
     public CellState[][] getField() {
-        return field.getField();
+        return fieldController.getField();
     }
 
     public Player currentPlayer() {
-        if (this.currentPlayer == this.playerOne) {
-            this.currentPlayer = this.playerTwo;
-        } else {
-            this.currentPlayer = this.playerOne;
-        }
+
         return this.currentPlayer;
     }
 
-    public void nextTurn(CellInfo cellInfo) throws InvalidCellCoordinatesException {
+    public void nextTurn(CellInfo cellInfo) throws InvalidCellCoordinatesException, CellNotAvailableException {
         isAvailable(cellInfo);
-        field.setCell(cellInfo);
+        fieldController.setCell(cellInfo);
         fieldController.checkWin(cellInfo.getFigure());
         currentPlayer();
     }
 
-    public void abortGame() {
-        this.gameController = null;
-    }
+   /* public void abortGame() {
+        fieldController.
+    }*/
 
     public void startGame(Player playerOne, Player playerTwo, GameStateListener listener) {
         if (figureChecking(playerOne, playerTwo)) {
@@ -68,6 +65,14 @@ public class GameController {
     public void startGame(Player playerOne, Player playerTwo, int size, GameStateListener listener) {
         if (figureChecking(playerOne, playerTwo)) {
             this.gameController = new GameController(playerOne, playerTwo, size);
+        }
+    }
+
+    private void switchPlayers() {
+        if (currentPlayer == playerOne) {
+            currentPlayer = playerTwo;
+        } else {
+            currentPlayer = playerOne;
         }
     }
 
