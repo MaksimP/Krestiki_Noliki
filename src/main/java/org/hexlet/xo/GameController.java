@@ -15,8 +15,6 @@ public class GameController {
 
     private FieldController fieldController;
 
-    private GameController gameController;
-
     private GameController() {
         fieldController = new FieldController();
     }
