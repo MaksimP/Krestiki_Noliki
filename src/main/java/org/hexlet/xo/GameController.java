@@ -6,7 +6,7 @@ import org.hexlet.xo.player.Player;
 
 public class GameController {
 
-    private static final int DEFAILT_FIELD_SIZE = 3;
+    private static final int DEFAULT_FIELD_SIZE = 3;
 
     private Player playerOne;
 
@@ -61,7 +61,7 @@ public class GameController {
     }*/
 
     public void startGame(Player playerOne, Player playerTwo, GameStateListener listener) {
-        startGame(playerOne,playerTwo,DEFAILT_FIELD_SIZE,listener);
+        startGame(playerOne,playerTwo,DEFAULT_FIELD_SIZE,listener);
 
     }
 
