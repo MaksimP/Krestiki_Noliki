@@ -85,5 +85,8 @@ public class FieldController {
     public CellState[][] getField() {
         return field.getField();
     }
+    public int getEmptyCellsCount() {
+        return field.getEmptyCellsCount();
+    }
 
 }
