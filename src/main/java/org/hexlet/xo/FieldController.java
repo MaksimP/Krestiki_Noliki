@@ -82,5 +82,8 @@ public class FieldController {
     public int getFieldSize() {
         return field.SIZE;
     }
+    public CellState[][] getField() {
+        return field.getField();
+    }
 
 }
