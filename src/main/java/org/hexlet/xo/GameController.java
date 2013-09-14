@@ -17,7 +17,7 @@ public class GameController {
     private FieldController fieldController;
     private GameStateListener listener;
 
-    private GameController() {
+    public GameController() {
         fieldController = new FieldController();
     }
 
