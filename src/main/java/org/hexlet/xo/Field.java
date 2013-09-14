@@ -37,11 +37,7 @@ public class Field {
     public void clear() {
         for (int y = 0; y < SIZE; y++) {
             for (int x = 0; x < SIZE; x++) {
-                try {
                     setCell(new CellInfo(x, y, CellState.EMPTY));
-                } catch (InvalidCellCoordinatesException e) {
-                    e.printStackTrace();
-                }
             }
         }
     }
