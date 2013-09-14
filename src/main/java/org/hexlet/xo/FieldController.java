@@ -71,7 +71,7 @@ public class FieldController {
     }
 
     public boolean isAvailable(CellInfo cell) throws InvalidCellCoordinatesException {
-        return field.getCell(cell.X,cell.Y).getFigure() == CellState.EMPTY;
+        return field.getCell(cell.X,cell.Y).figure == CellState.EMPTY;
     }
 
     public void setCell(CellInfo cell) throws CellNotAvailableException, InvalidCellCoordinatesException {
