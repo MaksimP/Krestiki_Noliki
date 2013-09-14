@@ -7,7 +7,7 @@ public class CellInfo {
     public final int Y;
     public final CellState figure;
 
-    public CellInfo(int x, int y, CellState cellState) throws InvalidCellCoordinatesException {
+    public CellInfo(int x, int y, CellState cellState) {
         X = x;
         Y = y;
         figure = cellState;
