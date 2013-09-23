@@ -31,7 +31,7 @@ public class Field {
     }
 
     public CellInfo getCell(int x, int y) throws InvalidCellCoordinatesException {
-        return new CellInfo(x, y, field[x][y]);
+        return new CellInfo(x, y, field[y][x]);
     }
 
     public void clear() {
