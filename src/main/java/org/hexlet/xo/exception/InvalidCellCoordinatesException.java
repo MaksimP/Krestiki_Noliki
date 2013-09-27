@@ -7,6 +7,8 @@ package org.hexlet.xo.exception;
 
 public class InvalidCellCoordinatesException extends Exception {
 
+    public InvalidCellCoordinatesException() {}
+
     public InvalidCellCoordinatesException(String message) {
         super(message);
     }
