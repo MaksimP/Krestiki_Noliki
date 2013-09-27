@@ -1,6 +1,6 @@
-//import com.sun.corba.se.impl.orb.ParserTable;
 import org.hexlet.xo.Field;
 import org.hexlet.xo.CellState;
+import org.hexlet.xo.CellInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.runner.RunWith;
@@ -24,6 +24,13 @@ public class FieldTest {
                 {CellState.EMPTY,CellState.EMPTY,CellState.EMPTY,},
                 };
         CellState[][] result = field.getField();
-        org.junit.Assert.assertArrayEquals(expect, result);
+        org.junit.Assert.assertArrayEquals("Failure - default contructor creates invalid array",expect, result);
+    }
+
+    @Test
+    public void emptyCellsCount() {
+        org.junit.Assert.assertEquals("Failure - invalid empty cells count", 9, field.getEmptyCellsCount());
+        field.setCell(new CellInfo(0,0, CellState.X));
+        org.junit.Assert.assertEquals("Failure - invalid empty cells count", 8, field.getEmptyCellsCount());
     }
 }
